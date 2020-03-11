@@ -1,4 +1,9 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faAngleDoubleUp,
+  faAngleDoubleDown
+} from "@fortawesome/free-solid-svg-icons";
 const TimerSetup = props => {
   return (
     <div
@@ -14,7 +19,7 @@ const TimerSetup = props => {
               className="remove_button_css"
               onClick={props.increaseTimeLength}
             >
-              <i className="fa fa-arrow-circle-o-up"></i>
+              <FontAwesomeIcon icon={faAngleDoubleUp} />
             </button>
           </div>
           <div id={props.label + "-length"} className="col">
@@ -26,7 +31,7 @@ const TimerSetup = props => {
               className="remove_button_css"
               onClick={props.decreaseTimeLength}
             >
-              <i className="fa fa-arrow-circle-o-down" />
+              <FontAwesomeIcon icon={faAngleDoubleDown} />
             </button>
           </div>
         </div>

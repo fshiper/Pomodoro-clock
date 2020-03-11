@@ -2,6 +2,12 @@ import React, { useReducer, useState, useEffect } from "react";
 import useInterval from "./components/useInterval";
 import TimerDisplay from "./components/TimerDisplay";
 import TimerSetup from "./components/TimerSetup";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPlayCircle,
+  faPauseCircle,
+  faSyncAlt
+} from "@fortawesome/free-solid-svg-icons";
 
 const initialState = {
   breakLength: 5,
@@ -144,9 +150,8 @@ const PomodoroClock = () => {
               }}
               className="remove_button_css"
             >
-              <i className="" />
-              <i className=""></i>
-              <i className="fas fa-pause-circle"></i>
+              <FontAwesomeIcon icon={faPlayCircle} />
+              <FontAwesomeIcon icon={faPauseCircle} />
             </button>
             <button
               id="reset"
@@ -157,7 +162,7 @@ const PomodoroClock = () => {
                 pauseBeep();
               }}
             >
-              <i className=""></i>
+              <FontAwesomeIcon icon={faSyncAlt} />
             </button>
           </div>
         </div>
